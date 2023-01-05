@@ -1,11 +1,19 @@
 # sanity-plugin-milkdown
 
-> This is a **Sanity Studio v3** plugin.
+## What is it
+
+A Markdown editor for Sanity Studio with preview supported by milkdown which was a alternatives to official plugin `sanity-plugin-markdown`
 
 ## Installation
 
 ```sh
-npm install sanity-plugin-milkdown
+npm install sanity-plugin-milkdown --save
+```
+
+or
+
+```sh
+pnpm add sanity-plugin-milkdown
 ```
 
 ## Usage
@@ -14,11 +22,11 @@ Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {myPlugin} from 'sanity-plugin-milkdown'
+import {markdownSchema} from 'sanity-plugin-milkdown'
 
 export default defineConfig({
   //...
-  plugins: [myPlugin({})],
+  plugins: [markdownSchema({})],
 })
 ```
 
