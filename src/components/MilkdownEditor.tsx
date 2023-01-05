@@ -5,6 +5,7 @@ import {
   MilkdownPlugin,
   rootCtx,
 } from '@milkdown/core'
+import {block} from '@milkdown/plugin-block'
 import {clipboard} from '@milkdown/plugin-clipboard'
 import {cursor} from '@milkdown/plugin-cursor'
 import {history} from '@milkdown/plugin-history'
@@ -54,6 +55,7 @@ const MilkDownEditor: React.FunctionComponent<MilkDownEditorProps> = ({
       .use(prism)
       .use(history)
       .use(clipboard)
+      .use(block)
       .use(listener)
 
     plugins?.forEach((plugin) => {
