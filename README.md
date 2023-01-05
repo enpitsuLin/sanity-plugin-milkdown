@@ -2,7 +2,7 @@
 
 ## What is it
 
-A Markdown editor for Sanity Studio with preview supported by milkdown which was a alternatives to official plugin `sanity-plugin-markdown`
+A Markdown editor for Sanity Studio with preview supported by [Milkdown](https://github.com/Saul-Mirone/milkdown) which was a alternatives to official plugin `sanity-plugin-markdown`
 
 ## Installation
 
@@ -29,6 +29,10 @@ export default defineConfig({
   plugins: [markdownSchema({})],
 })
 ```
+
+## Demo
+
+![milkdowndemo](https://user-images.githubusercontent.com/29378026/210738213-634e2c1f-5fcc-4717-95f1-adb23925e56a.gif)
 
 ## License
 
