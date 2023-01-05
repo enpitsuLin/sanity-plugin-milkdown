@@ -13,6 +13,7 @@ import {tooltip} from '@milkdown/plugin-tooltip'
 import {gfm} from '@milkdown/preset-gfm'
 import {ReactEditor, useEditor} from '@milkdown/react'
 import {nord} from '@milkdown/theme-nord'
+import {history} from '@milkdown/plugin-history'
 import * as React from 'react'
 import {useEffect} from 'react'
 
@@ -49,6 +50,7 @@ const MilkDownEditor: React.FunctionComponent<MilkDownEditorProps> = ({
       .use(tooltip)
       .use(slash)
       .use(prism)
+      .use(history)
       .use(listener)
 
     plugins?.forEach((plugin) => {

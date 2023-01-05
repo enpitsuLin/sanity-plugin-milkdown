@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@milkdown/core': ^6.5.4
+  '@milkdown/plugin-history': ^6.5.4
   '@milkdown/plugin-listener': ^6.5.4
   '@milkdown/plugin-menu': ^6.5.4
   '@milkdown/plugin-prism': ^6.5.4
@@ -42,6 +43,7 @@ specifiers:
 
 dependencies:
   '@milkdown/core': 6.5.4_@milkdown+prose@6.5.4
+  '@milkdown/plugin-history': 6.5.4_hcx5jzbrehmpjr4bwjtmcqoyxa
   '@milkdown/plugin-listener': 6.5.4_hcx5jzbrehmpjr4bwjtmcqoyxa
   '@milkdown/plugin-menu': 6.5.4_hcx5jzbrehmpjr4bwjtmcqoyxa
   '@milkdown/plugin-prism': 6.5.4_hcx5jzbrehmpjr4bwjtmcqoyxa
@@ -1857,6 +1859,18 @@ packages:
   /@milkdown/exception/6.5.4:
     resolution: {integrity: sha512-ZBiGT7iEocwsAY2zvY0Ft+xO2RKgY9VbEiu9tk4l3sZP3JNAPmVgssIjQhJL6eEln53oPel48/fXzs2NvyXSFQ==}
     dependencies:
+      tslib: 2.4.1
+    dev: false
+
+  /@milkdown/plugin-history/6.5.4_hcx5jzbrehmpjr4bwjtmcqoyxa:
+    resolution: {integrity: sha512-pffeubQsi60Ypg0w9rU9TuASwjzp/JgngKML4Jhjif0U4R8odwuGu6PIPyhsMKJnZekCKcJjT06gAapd0SYH2A==}
+    peerDependencies:
+      '@milkdown/core': ^6.0.1
+      '@milkdown/prose': ^6.0.1
+    dependencies:
+      '@milkdown/core': 6.5.4_@milkdown+prose@6.5.4
+      '@milkdown/prose': 6.5.4
+      '@milkdown/utils': 6.5.4_hcx5jzbrehmpjr4bwjtmcqoyxa
       tslib: 2.4.1
     dev: false
 
