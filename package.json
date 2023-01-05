@@ -9,6 +9,14 @@
     "markdown",
     "github flavored markdown"
   ],
+  "homepage": "https://github.com/enpitsuLin/sanity-plugin-milkdown#readme",
+  "bugs": {
+    "url": "https://github.com/enpitsuLin/sanity-plugin-milkdown/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:enpitsuLin/sanity-plugin-milkdown.git"
+  },
   "license": "MIT",
   "author": "enpitsulin <enpitsulin@gmail.com>",
   "exports": {
