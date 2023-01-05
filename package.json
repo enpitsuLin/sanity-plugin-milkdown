@@ -46,7 +46,8 @@
     "@milkdown/react": "^6.5.4",
     "@milkdown/theme-nord": "^6.5.4",
     "@sanity/incompatible-plugin": "^1.0.4",
-    "@sanity/ui": "^1.0.12"
+    "@sanity/ui": "^1.0.12",
+    "react-helmet-async": "^1.3.0"
   },
   "devDependencies": {
     "@sanity/pkg-utils": "^2.1.1",
