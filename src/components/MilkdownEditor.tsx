@@ -5,6 +5,8 @@ import {
   MilkdownPlugin,
   rootCtx,
 } from '@milkdown/core'
+import {cursor} from '@milkdown/plugin-cursor'
+import {history} from '@milkdown/plugin-history'
 import {listener, listenerCtx} from '@milkdown/plugin-listener'
 import {menu} from '@milkdown/plugin-menu'
 import {prism} from '@milkdown/plugin-prism'
@@ -13,7 +15,6 @@ import {tooltip} from '@milkdown/plugin-tooltip'
 import {gfm} from '@milkdown/preset-gfm'
 import {ReactEditor, useEditor} from '@milkdown/react'
 import {nord} from '@milkdown/theme-nord'
-import {history} from '@milkdown/plugin-history'
 import * as React from 'react'
 
 export interface MilkDownEditorProps {
@@ -47,6 +48,7 @@ const MilkDownEditor: React.FunctionComponent<MilkDownEditorProps> = ({
       .use(gfm)
       .use(menu)
       .use(tooltip)
+      .use(cursor)
       .use(slash)
       .use(prism)
       .use(history)
