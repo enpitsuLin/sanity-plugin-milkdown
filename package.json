@@ -4,7 +4,10 @@
   "description": "A Markdown editor with preview support by milkdown for Sanity Studio",
   "keywords": [
     "sanity",
-    "sanity-plugin"
+    "sanity-plugin",
+    "milkdown",
+    "markdown",
+    "github flavored markdown"
   ],
   "license": "MIT",
   "author": "enpitsulin <enpitsulin@gmail.com>",
