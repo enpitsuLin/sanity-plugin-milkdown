@@ -12,6 +12,8 @@ specifiers:
   '@milkdown/prose': ^6.5.4
   '@milkdown/react': ^6.5.4
   '@milkdown/theme-nord': ^6.5.4
+  '@milkdown/utils': ^6.5.4
+  '@sanity/icons': ^2.2.2
   '@sanity/incompatible-plugin': ^1.0.4
   '@sanity/pkg-utils': ^2.1.1
   '@sanity/plugin-kit': ^3.1.1
@@ -50,6 +52,8 @@ dependencies:
   '@milkdown/prose': 6.5.4
   '@milkdown/react': 6.5.4_qouln3aziqghorafgkiict6gtm
   '@milkdown/theme-nord': 6.5.4_hcx5jzbrehmpjr4bwjtmcqoyxa
+  '@milkdown/utils': 6.5.4_hcx5jzbrehmpjr4bwjtmcqoyxa
+  '@sanity/icons': 2.2.2_react@18.2.0
   '@sanity/incompatible-plugin': 1.0.4_biqbaboplfbrettd7655fr4n2y
   '@sanity/ui': 1.0.12_23mhwjhnzfjwvdn7ol54k26zom
   react-helmet-async: 1.3.0_biqbaboplfbrettd7655fr4n2y

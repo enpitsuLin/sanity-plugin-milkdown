@@ -1,5 +1,6 @@
+import {createElement as h} from 'react'
 import {defineType, StringDefinition} from 'sanity'
-import {MarkdownEditorMilkdown} from './components/Editor'
+import {MarkdownEditorMilkdown, MarkdownEditorMilkdownProps} from './components/Editor'
 import {MilkdownPluginConfig} from './index'
 
 const markdownTypeName = 'markdown' as const
@@ -25,7 +26,10 @@ export const markdownSchemaType = (config: MilkdownPluginConfig) => {
     name: markdownTypeName,
     title: 'Markdown',
     components: {
-      input: MarkdownEditorMilkdown,
+      input: (p) => {
+        const props: MarkdownEditorMilkdownProps = {...p, plugins: config.plugins}
+        return h(MarkdownEditorMilkdown, props)
+      },
     },
   })
 }

@@ -49,6 +49,8 @@
     "@milkdown/prose": "^6.5.4",
     "@milkdown/react": "^6.5.4",
     "@milkdown/theme-nord": "^6.5.4",
+    "@milkdown/utils": "^6.5.4",
+    "@sanity/icons": "^2.2.2",
     "@sanity/incompatible-plugin": "^1.0.4",
     "@sanity/ui": "^1.0.12",
     "react-helmet-async": "^1.3.0"

@@ -3,6 +3,7 @@ import {StringInputProps} from 'sanity'
 import {Card} from '@sanity/ui'
 import {HelmetData, Helmet} from 'react-helmet-async'
 import styled from 'styled-components'
+import {MilkdownPlugin} from '@milkdown/core'
 
 const StyledCard = styled(Card)`
   max-height: 300px;
@@ -13,11 +14,13 @@ const MilkDownEditor = lazy(() => import('./MilkdownEditor'))
 
 const helmetData = new HelmetData({})
 
-export interface MarkdownEditorMilkdownProps extends StringInputProps {}
+export interface MarkdownEditorMilkdownProps extends StringInputProps {
+  plugins?: MilkdownPlugin[]
+}
 
 export const MarkdownEditorMilkdown = forwardRef<HTMLDivElement, MarkdownEditorMilkdownProps>(
   (props, ref) => {
-    const {value = '', readOnly} = props
+    const {value = '', readOnly, plugins} = props
 
     const [editedValue, setEditedValue] = useState<string>(value)
     return (
@@ -43,11 +46,18 @@ export const MarkdownEditorMilkdown = forwardRef<HTMLDivElement, MarkdownEditorM
           />
         </Helmet>
         <StyledCard>
-          <MilkDownEditor value={editedValue} onChange={setEditedValue} readOnly={readOnly} />
+          <MilkDownEditor
+            value={editedValue}
+            onChange={setEditedValue}
+            readOnly={readOnly}
+            plugins={plugins}
+          />
         </StyledCard>
       </div>
     )
   }
 )
+
+MarkdownEditorMilkdown.defaultProps = {plugins: []}
 
 MarkdownEditorMilkdown.displayName = 'MarkdownEditorMilkdown'
