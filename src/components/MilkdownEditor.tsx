@@ -15,7 +15,6 @@ import {ReactEditor, useEditor} from '@milkdown/react'
 import {nord} from '@milkdown/theme-nord'
 import {history} from '@milkdown/plugin-history'
 import * as React from 'react'
-import {useEffect} from 'react'
 
 export interface MilkDownEditorProps {
   value: string
@@ -30,7 +29,7 @@ const MilkDownEditor: React.FunctionComponent<MilkDownEditorProps> = ({
   readOnly,
   plugins,
 }) => {
-  const {editor, loading, getInstance} = useEditor((root, renderReact) => {
+  const {editor} = useEditor((root, renderReact) => {
     const editorInstance = Editor.make()
       .config((ctx) => {
         ctx.set(rootCtx, root)
@@ -58,17 +57,6 @@ const MilkDownEditor: React.FunctionComponent<MilkDownEditorProps> = ({
     })
     return editorInstance
   })
-
-  useEffect(() => {
-    if (!loading) {
-      const instance = getInstance()
-      instance?.action((ctx) => {
-        // eslint-disable-next-line no-console
-        console.log(ctx)
-        // do something
-      })
-    }
-  }, [getInstance, loading])
 
   return <ReactEditor editor={editor} />
 }
