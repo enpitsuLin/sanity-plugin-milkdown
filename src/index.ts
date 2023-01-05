@@ -1,9 +1,10 @@
+import {MilkdownPlugin} from '@milkdown/core'
 import {definePlugin} from 'sanity'
 import {MarkdownEditorMilkdown as Editor} from './components/Editor'
 import {MarkdownDefinition, markdownSchemaType} from './schema'
 
 interface MilkdownPluginConfig {
-  /* nothing here yet */
+  plugins?: MilkdownPlugin[]
 }
 
 // re-exporting MarkdownEditor directly explodes @parcel/transformer-typescript-types :shrug:
@@ -28,6 +29,6 @@ export type {MarkdownDefinition, MilkdownPluginConfig}
 export const markdownSchema = definePlugin<MilkdownPluginConfig | void>((config) => ({
   name: 'sanity-plugin-milkdown',
   schema: {
-    types: [markdownSchemaType],
+    types: [markdownSchemaType(config ?? {})],
   },
 }))

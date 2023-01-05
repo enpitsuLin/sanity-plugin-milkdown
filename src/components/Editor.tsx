@@ -13,29 +13,41 @@ const MilkDownEditor = lazy(() => import('./MilkdownEditor'))
 
 const helmetData = new HelmetData({})
 
-export const MarkdownEditorMilkdown = forwardRef<HTMLDivElement, StringInputProps>((props, ref) => {
-  const {value = '', readOnly} = props
+export interface MarkdownEditorMilkdownProps extends StringInputProps {}
 
-  const [editedValue, setEditedValue] = useState<string>(value)
-  return (
-    <div ref={ref}>
-      <Helmet helmetData={helmetData}>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        />
+export const MarkdownEditorMilkdown = forwardRef<HTMLDivElement, MarkdownEditorMilkdownProps>(
+  (props, ref) => {
+    const {value = '', readOnly} = props
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-        />
-      </Helmet>
-      <StyledCard>
-        <MilkDownEditor value={editedValue} onChange={setEditedValue} readOnly={readOnly} />
-      </StyledCard>
-    </div>
-  )
-})
+    const [editedValue, setEditedValue] = useState<string>(value)
+    return (
+      <div ref={ref}>
+        <Helmet helmetData={helmetData}>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+          />
+
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+          />
+
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-dark.min.css"
+            integrity="sha512-y6rcKLYkttB9ZUBaz0IsncWFo1VoqISrcMY6J1i6Nb9WB9jRrpll8zjt5e1/naZHyXFoR/1VlH72+2VJ1Uzh7A=="
+            crossOrigin="anonymous"
+            referrerPolicy="no-referrer"
+          />
+        </Helmet>
+        <StyledCard>
+          <MilkDownEditor value={editedValue} onChange={setEditedValue} readOnly={readOnly} />
+        </StyledCard>
+      </div>
+    )
+  }
+)
 
 MarkdownEditorMilkdown.displayName = 'MarkdownEditorMilkdown'

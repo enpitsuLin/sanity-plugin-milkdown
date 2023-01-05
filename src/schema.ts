@@ -1,5 +1,6 @@
 import {defineType, StringDefinition} from 'sanity'
 import {MarkdownEditorMilkdown} from './components/Editor'
+import {MilkdownPluginConfig} from './index'
 
 const markdownTypeName = 'markdown' as const
 
@@ -18,9 +19,13 @@ declare module '@sanity/types' {
   }
 }
 
-export const markdownSchemaType = defineType({
-  type: 'string',
-  name: markdownTypeName,
-  title: 'Markdown',
-  ...({components: {input: MarkdownEditorMilkdown}} as {}), //TODO revert when rc.1 ships
-})
+export const markdownSchemaType = (config: MilkdownPluginConfig) => {
+  return defineType({
+    type: 'string',
+    name: markdownTypeName,
+    title: 'Markdown',
+    components: {
+      input: MarkdownEditorMilkdown,
+    },
+  })
+}
