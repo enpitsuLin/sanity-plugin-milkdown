@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@milkdown/core": "^6.5.4",
+    "@milkdown/plugin-clipboard": "^6.5.4",
     "@milkdown/plugin-cursor": "^6.5.4",
     "@milkdown/plugin-history": "^6.5.4",
     "@milkdown/plugin-listener": "^6.5.4",
